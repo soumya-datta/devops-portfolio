@@ -18,7 +18,7 @@ pipeline {
         stage('Test Kubernetes Connection') {
             steps {
                 echo "Checking if Jenkins has permission to talk to K3s..."
-                sh 'sudo k3s kubectl get nodes'
+                sh 'k3s kubectl get nodes'
             }
         }
     }
